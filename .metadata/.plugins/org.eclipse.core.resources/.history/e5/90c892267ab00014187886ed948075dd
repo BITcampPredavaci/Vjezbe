@@ -1,0 +1,51 @@
+Mon Feb 09 17:37:21 CET 2015 Hi I am thread  0, my count is  0
+
+Mon Feb 09 17:37:21 CET 2015 Hi I am thread  1, my count is  0
+
+Mon Feb 09 17:37:21 CET 2015 Hi I am thread  0, my count is  1
+
+Mon Feb 09 17:37:21 CET 2015 Hi I am thread  1, my count is  1
+
+Mon Feb 09 17:37:22 CET 2015 Hi I am thread  1, my count is  2
+
+Mon Feb 09 17:37:22 CET 2015 Hi I am thread  0, my count is  2
+
+Mon Feb 09 17:37:22 CET 2015 Hi I am thread  1, my count is  3
+
+Mon Feb 09 17:37:22 CET 2015 Hi I am thread  0, my count is  3
+
+Mon Feb 09 17:37:23 CET 2015 Hi I am thread  0, my count is  4
+
+Mon Feb 09 17:37:23 CET 2015 Hi I am thread  1, my count is  4
+
+Mon Feb 09 17:37:23 CET 2015 Hi I am thread  3, my count is  0
+
+Mon Feb 09 17:37:23 CET 2015 Hi I am thread  2, my count is  0
+
+Mon Feb 09 17:37:23 CET 2015 Hi I am thread  3, my count is  1
+
+Mon Feb 09 17:37:23 CET 2015 Hi I am thread  2, my count is  1
+
+Mon Feb 09 17:37:24 CET 2015 Hi I am thread  3, my count is  2
+
+Mon Feb 09 17:37:24 CET 2015 Hi I am thread  2, my count is  2
+
+Mon Feb 09 17:37:24 CET 2015 Hi I am thread  3, my count is  3
+
+Mon Feb 09 17:37:24 CET 2015 Hi I am thread  2, my count is  3
+
+Mon Feb 09 17:37:25 CET 2015 Hi I am thread  2, my count is  4
+
+Mon Feb 09 17:37:25 CET 2015 Hi I am thread  3, my count is  4
+
+Mon Feb 09 17:37:25 CET 2015 Hi I am thread  4, my count is  0
+
+Mon Feb 09 17:37:25 CET 2015 Hi I am thread  4, my count is  1
+
+Mon Feb 09 17:37:26 CET 2015 Hi I am thread  4, my count is  2
+
+Mon Feb 09 17:37:26 CET 2015 Hi I am thread  4, my count is  3
+
+Mon Feb 09 17:37:27 CET 2015 Hi I am thread  4, my count is  4
+
+Mon Feb 09 17:37:27 CET 2015 Sve gotovo

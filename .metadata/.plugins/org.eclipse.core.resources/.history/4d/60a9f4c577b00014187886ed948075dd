@@ -1,0 +1,28 @@
+package ba.bitcamp.benjamin.pools;
+
+import java.io.FileNotFoundException;
+import java.util.HashMap;
+
+import ba.bitcamp.loger.Logger;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		
+		HashMap<String, String> logs = new HashMap<String, String>();
+		logs.put("threadLog", "threadLog");
+		try {
+			new Logger(logs);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		int numThreads = 5;
+		for (int i = 0; i < numThreads; i++) {
+			new Thread(new Greetings(i)).start();
+		}
+
+	}
+
+}
