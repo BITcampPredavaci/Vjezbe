@@ -1,0 +1,21 @@
+package ba.bitcamp.benjamin.server;
+
+import java.net.Socket;
+
+public class Connection implements Runnable {
+	
+	private Socket client;
+	
+	public Connection(Socket client){
+		this.client = client;
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+
+}

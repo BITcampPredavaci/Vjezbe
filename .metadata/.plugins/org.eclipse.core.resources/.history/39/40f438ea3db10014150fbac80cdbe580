@@ -1,0 +1,10 @@
+package ba.bitcamp.benjamin.server;
+
+public class ConnectionListener {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

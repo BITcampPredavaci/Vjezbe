@@ -59,3 +59,64 @@ Mon Feb 09 17:39:10 CET 2015 Hi I am thread  4, my count is  4
 Mon Feb 09 17:39:10 CET 2015 Hi I am thread  6, my count is  4
 
 Mon Feb 09 17:39:10 CET 2015 Sve gotovo
+Mon Feb 09 19:39:02 CET 2015 Hi I am thread  0, my count is  0
+
+Mon Feb 09 19:39:02 CET 2015 Hi I am thread  1, my count is  0
+
+Mon Feb 09 19:39:02 CET 2015 Hi I am thread  0, my count is  1
+
+Mon Feb 09 19:39:02 CET 2015 Hi I am thread  1, my count is  1
+
+Mon Feb 09 19:39:03 CET 2015 Hi I am thread  0, my count is  2
+
+Mon Feb 09 19:39:03 CET 2015 Hi I am thread  1, my count is  2
+
+Mon Feb 09 19:39:03 CET 2015 Hi I am thread  0, my count is  3
+
+Mon Feb 09 19:39:03 CET 2015 Hi I am thread  1, my count is  3
+
+Mon Feb 09 19:39:04 CET 2015 Hi I am thread  0, my count is  4
+
+Mon Feb 09 19:39:04 CET 2015 Hi I am thread  1, my count is  4
+
+Mon Feb 09 19:39:04 CET 2015 Hi I am thread  3, my count is  0
+
+Mon Feb 09 19:39:04 CET 2015 Hi I am thread  2, my count is  0
+
+Mon Feb 09 19:39:04 CET 2015 Hi I am thread  2, my count is  1
+
+Mon Feb 09 19:39:04 CET 2015 Hi I am thread  3, my count is  1
+
+Mon Feb 09 19:39:05 CET 2015 Hi I am thread  2, my count is  2
+
+Mon Feb 09 19:39:05 CET 2015 Hi I am thread  3, my count is  2
+
+Mon Feb 09 19:39:05 CET 2015 Hi I am thread  2, my count is  3
+
+Mon Feb 09 19:39:05 CET 2015 Hi I am thread  3, my count is  3
+
+Mon Feb 09 19:39:06 CET 2015 Hi I am thread  2, my count is  4
+
+Mon Feb 09 19:39:06 CET 2015 Hi I am thread  3, my count is  4
+
+Mon Feb 09 19:39:06 CET 2015 Hi I am thread  4, my count is  0
+
+Mon Feb 09 19:39:06 CET 2015 Hi I am thread  6, my count is  0
+
+Mon Feb 09 19:39:06 CET 2015 Hi I am thread  4, my count is  1
+
+Mon Feb 09 19:39:06 CET 2015 Hi I am thread  6, my count is  1
+
+Mon Feb 09 19:39:07 CET 2015 Hi I am thread  6, my count is  2
+
+Mon Feb 09 19:39:07 CET 2015 Hi I am thread  4, my count is  2
+
+Mon Feb 09 19:39:07 CET 2015 Hi I am thread  6, my count is  3
+
+Mon Feb 09 19:39:07 CET 2015 Hi I am thread  4, my count is  3
+
+Mon Feb 09 19:39:08 CET 2015 Hi I am thread  4, my count is  4
+
+Mon Feb 09 19:39:08 CET 2015 Hi I am thread  6, my count is  4
+
+Mon Feb 09 19:39:08 CET 2015 Sve gotovo
