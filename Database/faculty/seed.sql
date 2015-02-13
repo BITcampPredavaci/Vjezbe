@@ -1,3 +1,4 @@
+begin;
 /*inserting students */
 insert into students values(?, 'Yusuf', 'Kikic', 2);
 insert into students values(?, 'Samir', 'Hodzic', 1);

@@ -27,7 +27,22 @@ select courses.name as cn, lecturers.name as ln from courses
 inner join course_taught on courses.code = course_taught.course_code
 inner join lecturers on course_taught.lecturer_id = lecturers.id;
 
+select students.name, course_code from course_taken
+natural inner join students
+where course_code like "CS%" limit 20 offset 20;
 
+select distinct(name) from students;
+
+select students.name as StudentName from students
+where students.student_id in (
+select course_taken.student_id from course_taken where course_code = "CS101"
+);
+
+create view CourseLecturer  as 
+	select courses.name as cn, lecturers.name as ln from courses
+	inner join course_taught on courses.code = course_taught.course_code
+	inner join lecturers on course_taught.lecturer_id = lecturers.id
+;
 
 
 

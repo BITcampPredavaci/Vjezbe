@@ -1,3 +1,6 @@
+
+.header on
+pragma foreign_keys = on;
 create table if not exists Students(
 	student_id integer primary key autoincrement,
 	name varchar(15) not null,
@@ -22,8 +25,8 @@ create table if not exists Course_taken (
 	student_id integer,
 	course_code varchar(6),
 	grade smallint default 0,
-	foreign key (student_id) references Students,
-	foreign key (course_code) references Courses,
+	foreign key (student_id) references Students on update cascade on delete cascade,
+	foreign key (course_code) references Courses on update cascade on delete cascade,
 	primary key (student_id, course_code)
 );
 
@@ -31,6 +34,6 @@ create table if not exists Course_taught (
 	lecturer_id integer,
 	course_code varchar(6),
 	foreign key (lecturer_id) references Lecturers on update cascade on delete cascade,
-	foreign key (course_code) references Courses(code),
+	foreign key (course_code) references Courses(code) on update cascade on delete cascade,
 	primary key (lecturer_id, course_code)
 );
