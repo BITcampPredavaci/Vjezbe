@@ -1,0 +1,18 @@
+package ba.bitcamp.model;
+
+public class Contact extends Application {
+	
+	private int id;
+	private String name;
+	private String surname;
+	private String number;
+	
+	public Contact(){
+		this.id = -1;
+		this.name = "Unknown";
+		this.surname = "Unknown";
+		this.number = "";
+	}
+	
+
+}

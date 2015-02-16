@@ -1,0 +1,14 @@
+package ba.bitcamp.controller;
+
+public class ApplicationController {
+
+	public static void home(){
+		//prikaz home GUI-a
+	}
+	
+	public static void main(String[] args) {	
+		/* povezivanje sa bazom */
+		home();
+	}
+
+}

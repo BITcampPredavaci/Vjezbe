@@ -1,0 +1,12 @@
+package ba.bitcamp.intro;
+
+import java.sql.*;
+
+public class Connection {
+
+	public static void main(String[] args) {
+		Connection c = null;
+		c = DriverManager.getConnection("jdbc:sqlite:bitbase.db");
+	}
+
+}

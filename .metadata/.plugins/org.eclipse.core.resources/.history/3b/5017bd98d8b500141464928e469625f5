@@ -1,0 +1,6 @@
+package ba.bitcamp.model;
+
+public class Contact extends Application {
+	
+
+}

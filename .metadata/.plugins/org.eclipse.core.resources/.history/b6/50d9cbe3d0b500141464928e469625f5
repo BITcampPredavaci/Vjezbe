@@ -1,0 +1,31 @@
+package ba.bitcamp.view;
+
+import java.awt.Component;
+
+import javax.swing.JFrame;
+
+public class Main {
+	
+	private JFrame window = null;
+	protected int windowWidth = 400;
+	protected int windowHeight = 500;
+	
+	public Main(){
+		window = new JFrame("BitBook");
+		window.setSize(windowWidth, windowHeight);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.setResizable(false);
+	}
+	
+	protected void setVisible(){
+		window.validate();
+		window.repaint();
+		window.setVisible(true);
+	}
+	
+	protected void replacePanel(Component panel){
+		//TODO izbrisati stari panel
+		window.add(panel);
+	}
+
+}

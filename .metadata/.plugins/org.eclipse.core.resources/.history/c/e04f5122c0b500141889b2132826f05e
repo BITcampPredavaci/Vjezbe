@@ -1,0 +1,11 @@
+package ba.bitcamp.intro;
+
+import java.sql.*;
+
+public class CreateTable {
+
+	public static void main(String[] args) {
+		Connection db = null;
+	}
+
+}

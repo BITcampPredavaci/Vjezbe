@@ -1,0 +1,12 @@
+package ba.bitcamp.intro;
+
+import java.sql.*;
+
+public class CreateTable {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

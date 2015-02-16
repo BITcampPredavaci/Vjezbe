@@ -1,0 +1,18 @@
+package ba.bitcamp.intro;
+
+import java.sql.*;
+
+public class DBConnection {
+
+	public static void main(String[] args) {
+		DBConnection c = null;
+		try {
+			c = DriverManager.getConnection("jdbc:sqlite:bitbase.db");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

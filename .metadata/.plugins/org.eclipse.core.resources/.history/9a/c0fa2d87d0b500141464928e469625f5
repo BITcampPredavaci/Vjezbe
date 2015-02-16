@@ -1,0 +1,18 @@
+package ba.bitcamp.view;
+
+import javax.swing.JFrame;
+
+public class Main {
+	
+	private JFrame window = null;
+	protected int windowWidth = 400;
+	protected int windowHeight = 500;
+	
+	public Main(){
+		window = new JFrame("BitBook");
+		window.setSize(windowWidth, windowHeight);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.setResizable(false);
+	}
+
+}
