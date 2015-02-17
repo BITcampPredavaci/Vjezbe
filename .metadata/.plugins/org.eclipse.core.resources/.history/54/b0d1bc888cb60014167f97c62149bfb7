@@ -1,0 +1,39 @@
+package ba.bitcamp.model;
+
+import java.sql.*;
+
+public class Application {
+	protected static Connection db;
+	
+	/**
+	 * tries to establish a database connection
+	 * @throws SQLException if the connection is not successful
+	 */
+	public static void init() throws SQLException{
+		db = DriverManager.getConnection("jdbc:sqlite:phonebook.db");
+	}
+	
+	/**
+	 * Tries to find a single result
+	 * using the id column
+	 * @param id if the model
+	 * @param tableName name of the table to search in
+	 * @return a ResultSet collection
+	 */
+	protected static ResultSet find(int id, String tableName){
+		try {
+			Statement stmt = db.createStatement();
+			String sql = String.format("SELECT * FROM %s WHERE id = '%d' ;",
+					tableName, id);
+			return stmt.executeQuery(sql);
+		} catch (SQLException e) {
+			System.err.println(e.getMessage());
+			return null;
+		}
+		
+	}
+	
+	protected static boolean save(String tableName, String values){
+		
+	}
+}

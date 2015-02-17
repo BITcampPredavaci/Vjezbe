@@ -1,0 +1,26 @@
+package ba.bitcamp.controller;
+
+import java.sql.SQLException;
+
+import ba.bitcamp.model.*;
+import ba.bitcamp.view.*;
+
+public class ApplicationController {
+
+	public static void home(){
+		//prikaz home GUI-a
+		ApplicationView.home();
+	}
+	
+	public static void main(String[] args) {	
+		try {
+			Application.init();
+		} catch (SQLException e) {
+			System.err.println(e.getMessage());
+			System.exit(1);
+		}
+		Main.init();
+		home();
+	}
+
+}
