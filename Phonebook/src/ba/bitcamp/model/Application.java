@@ -55,4 +55,15 @@ public class Application {
 			return false;
 		}
 	}
+	//columnNames = name, suraname, *
+	protected static ResultSet all(String tableName, String columnNames){
+		try {
+			Statement stmt = db.createStatement();
+			String sql = String.format("SELECT %s FROM %s;", columnNames, tableName);
+			return stmt.executeQuery(sql);
+		} catch (SQLException e) {
+			System.err.println(e.getMessage());
+			return null;
+		}
+	}
 }

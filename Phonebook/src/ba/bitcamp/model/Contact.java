@@ -2,6 +2,7 @@ package ba.bitcamp.model;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedList;
 
 /**
  * The contacts model we are using It is both a class definition and connection
@@ -25,6 +26,12 @@ public class Contact extends Application {
 		this.name = "Unknown";
 		this.surname = "Unknown";
 		this.number = "";
+	}
+	
+	public Contact(int id, String name, String surname){
+		this.id = id;
+		this.name = name;
+		this.surname = surname;
 	}
 
 	public Contact(String name, String surname, String number) {
@@ -67,7 +74,32 @@ public class Contact extends Application {
 		String values = String.format("(?, '%s', '%s', '%s')", this.name, this.surname, this.number);
 		return Application.save(tableName, values);
 	}
+	
+	public static Contact[] all(){
+		ResultSet rs = Application.all(tableName, "id, name, surname");
+		if( rs == null)
+			return new Contact[0];
+		LinkedList<Contact> cl = new LinkedList<Contact>();
+		try {
+			while(rs.next()){
+				int id = rs.getInt("id");
+				String cName = rs.getString("name");
+				String cSurname = rs.getString("surname");
+				cl.add(new Contact(id, cName, cSurname));
+			}
+			Contact[] all = new Contact[cl.size()];
+			cl.toArray(all);
+			return all;
+		} catch (SQLException e) {
+			System.err.println(e.getMessage());
+			return new Contact[0];
+		}
+	}
 
+	public String getDisplayName(){
+		return this.name + " " + this.surname;
+	}
+	
 	public int getId() {
 		return id;
 	}

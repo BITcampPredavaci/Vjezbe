@@ -1,5 +1,6 @@
 package ba.bitcamp.view;
 
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -8,13 +9,14 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 
 import ba.bitcamp.controller.ApplicationController;
 import ba.bitcamp.model.Contact;
 
 public class ApplicationView extends Main {
-	
+
 	/**
 	 * Shows the apps start / home page.
 	 */
@@ -25,12 +27,12 @@ public class ApplicationView extends Main {
 		Font greetingFont = new Font("SansSerif", Font.BOLD, 30);
 		greeting.setFont(greetingFont);
 		content.add(greeting);
-		
+
 		JButton showContacts = new JButton("Show Contacts");
 		showContacts.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// ContactController.list();
+				ApplicationController.list();
 			}
 
 		});
@@ -39,15 +41,15 @@ public class ApplicationView extends Main {
 		addContact.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				 ApplicationController.addContact();
+				ApplicationController.addContact();
 			}
 		});
-		
+
 		content.add(addContact);
 		content.add(showContacts);
 		replaceContent(content);
 	}
-	
+
 	/**
 	 * Shows the form for adding a new contact
 	 */
@@ -75,8 +77,8 @@ public class ApplicationView extends Main {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				/* get the data from the input
-				 * and send it to the create method
+				/*
+				 * get the data from the input and send it to the create method
 				 */
 				String cName = nameF.getText();
 				String cSurname = surnameF.getText();
@@ -103,5 +105,68 @@ public class ApplicationView extends Main {
 		replaceContent(content);
 	}
 
+	public static void list(Contact[] all) {
+		
+		int buttonHeight = 50;
+		
+		JPanel content = new JPanel();
+		content.setPreferredSize(new Dimension(ApplicationView.windowWidth - 70, all.length * (buttonHeight + 20)-100));
+		
+		JButton back = new JButton("Back");
+		back.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				ApplicationController.home();
+			}
+		});
+		JButton addContact = new JButton("Add Contact");
+		addContact.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				ApplicationController.addContact();
+			}
+		});
+		
+		content.add(back);
+		content.add(addContact);
+
+
+		if (all.length < 1) {
+			JLabel message = new JLabel("You have no friends");
+			Font messageFont = new Font("SansSerif", Font.BOLD, 30);
+			message.setFont(messageFont);
+			content.add(message);
+		}
+
+		// TODO add Add Contact button
+
+		/*
+		 * creates a button for each contact in the list sets the label and name
+		 * for the button connects an action listener and adds the button to the
+		 * content panel
+		 */
+		for (int i = 0; i < all.length; i++) {
+			JButton current = new JButton(all[i].getDisplayName());
+			current.setName(Integer.toString(all[i].getId()));
+			current.setPreferredSize(new Dimension(
+					ApplicationView.windowWidth - 75, buttonHeight));
+			current.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					// TODO redirect to contact
+					JButton clicked = (JButton) (e.getSource());
+					int id = Integer.parseInt(clicked.getName());
+					System.out.println("Korisnik: " + id);
+				}
+			});
+			content.add(current);
+		}
+
+		JScrollPane sp = new JScrollPane(content);
+		sp.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		sp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+
+		replaceContent(sp);
+	}
 
 }

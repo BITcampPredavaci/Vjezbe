@@ -10,3 +10,17 @@ kod koji djeluje "komplikovano"
 Dodati mogucnost dodavanja i ispisa prethodno dodanih kontakata.
 
 <br />
+<h1> Dan 2 </h1>
+Na aplikaciju smo dodali mogucnosti dodavanja kontakta u imenik, i prikaz
+imenika (svi kontakti). Za to smo dodali odgovarajuce metode u Model, View i Controller klase.
+
+<h1> Plan za sutra </h1>
+Treba da zavrsimo R dio iz CRUD. Odnosno prikaz podataka o jednom kontaktu.
+Uradicemo i update i delete.
+
+<h1> Zadaca </h1>
+Dodati komentare na kod koji ste je napisan u toku vjezbi. Treba napisati i
+komentare za dokumentaciju (/**) i komentare koji pojasnjavaju sta se desava u
+kodu.
+
+<br />

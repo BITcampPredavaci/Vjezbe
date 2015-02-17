@@ -36,6 +36,11 @@ public class ApplicationController {
 		}
 	}
 	
+	public static void list(){
+		Contact[] all = Contact.all();
+		ApplicationView.list(all);
+	}
+	
 	public static void main(String[] args) {	
 		//try to initialize the database connection
 		try {
