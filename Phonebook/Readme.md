@@ -30,4 +30,5 @@ Zavrsili smo osnovnu Phonebook aplikaciju. Zadaca je da dodate komentare na kod
 i iskoristite logger (bilo onaj BitLogger bilo neki drugi) da pratite rad
 aplikacije.
 
+Treba i da dodate odgovarajuce testove za update i delete.
 <br />
