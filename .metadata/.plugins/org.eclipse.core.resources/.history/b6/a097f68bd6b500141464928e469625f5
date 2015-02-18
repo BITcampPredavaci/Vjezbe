@@ -1,7 +1,0 @@
-package ba.bitcamp.model;
-
-import java.sql.*;
-
-public class Application {
-
-}

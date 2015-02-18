@@ -1,7 +1,0 @@
-package ba.bitcamp.view;
-
-public class Main {
-	
-	private JFrame window = null;
-
-}

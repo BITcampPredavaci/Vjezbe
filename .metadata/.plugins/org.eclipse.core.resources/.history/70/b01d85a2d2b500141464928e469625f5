@@ -1,9 +1,0 @@
-package ba.bitcamp.view;
-
-public class ApplicationView extends Main {
-
-	public static void home(){
-		
-	}
-	
-}

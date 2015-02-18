@@ -24,3 +24,10 @@ komentare za dokumentaciju (/**) i komentare koji pojasnjavaju sta se desava u
 kodu.
 
 <br />
+
+<h1>Dan 3 </h3>
+Zavrsili smo osnovnu Phonebook aplikaciju. Zadaca je da dodate komentare na kod
+i iskoristite logger (bilo onaj BitLogger bilo neki drugi) da pratite rad
+aplikacije.
+
+<br />

@@ -29,8 +29,7 @@ public class ApplicationController {
 		Contact newContact = new Contact(name, surname, number);
 		if( newContact.save() == true){
 			//TODO redirect to contact info
-			home();
-			JOptionPane.showMessageDialog(null, "Successfuly saved "+newContact.getName(), "Contact added", JOptionPane.INFORMATION_MESSAGE);
+			show(newContact.getId());
 		} else {
 			JOptionPane.showMessageDialog(null, "There has been a mistake", "Error saving Contact", JOptionPane.WARNING_MESSAGE);
 		}
@@ -41,10 +40,30 @@ public class ApplicationController {
 		ApplicationView.list(all);
 	}
 	
+	public static void show(int id){
+		Contact current = Contact.find(id);
+		ApplicationView.show(current);
+	}
+	
+	public static void update(int id){
+		Contact current = Contact.find(id);
+		ApplicationView.updateContact(current);
+	}
+	
+	public static void update(Contact c){
+		c.update();
+		ApplicationView.show(c);
+	}
+	
+	public static void delete(int id){
+		Contact.delete(id);
+		list();
+	}
+	
 	public static void main(String[] args) {	
 		//try to initialize the database connection
 		try {
-			Application.init();
+			Application.init("phonebook");
 		} catch (SQLException e) {
 			System.err.println(e.getMessage());
 			System.exit(1);

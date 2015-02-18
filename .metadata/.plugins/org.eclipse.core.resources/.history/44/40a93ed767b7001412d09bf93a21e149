@@ -1,0 +1,27 @@
+package ba.bitcamp.test;
+
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class ModelTest {
+	
+	private class DBConnection {
+		
+		/**
+		 * tries to establish a database connection
+		 * @throws SQLException if the connection is not successful
+		 */
+		public static void init() throws SQLException{
+			db = DriverManager.getConnection("jdbc:sqlite:phonebook.db");
+		}
+
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

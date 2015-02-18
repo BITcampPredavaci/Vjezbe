@@ -1,0 +1,40 @@
+package ba.bitcamp.test;
+
+import java.sql.*;
+
+import ba.bitcamp.model.Application;
+
+public class ModelTest {
+	
+	private class DBConnection {
+		
+		private Connection db;
+		
+		public DBConnection() throws SQLException{
+			db = DriverManager.getConnection("jdbc:sqlite:phonebook_test.db");
+		}
+		
+		public void cleanDatabase(String[] tableNames){
+			try {
+				Statement stmt = db.createStatement();
+			} catch (SQLException e) {
+				System.err.println("Unable to create statement");
+				System.exit(1);
+			}
+			
+		}
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		try {
+			Application.init("phonebook_test");
+		} catch (SQLException e) {
+			System.err.println("Test failed: no connection");
+			System.exit(1);
+		}
+	}
+
+}

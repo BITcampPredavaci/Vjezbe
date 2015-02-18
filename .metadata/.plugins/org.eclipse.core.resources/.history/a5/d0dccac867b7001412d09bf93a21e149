@@ -1,0 +1,15 @@
+package ba.bitcamp.test;
+
+public class ModelTest {
+	
+	private class DBConnection {
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+
+}
