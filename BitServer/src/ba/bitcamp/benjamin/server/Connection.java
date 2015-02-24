@@ -38,18 +38,22 @@ public class Connection implements Runnable {
 		}
 
 		String line = null;
+		String tempLine = null;
 		try {
-			while ((line = read.readLine()) != null) {
-				if (line.contains("GET") || line.isEmpty()) {
+			while ((tempLine = read.readLine()) != null) {
+				if (tempLine.contains("GET") || tempLine.contains("POST")) {
+					line = tempLine;
 					break;
 				}
+				System.out.println(tempLine);
 			}
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println("Dobili: " + line);
-		if (!line.contains("GET")) {
+		if (!line.contains("GET") && !line.contains("POST")) {
 			Logger.log("warning", "Was not GET request");
 			Response.error(write, "Invalid request");
 			closeClient();
